@@ -1,0 +1,57 @@
+{
+  "name": "currency-converter",
+  "version": "1.0.0",
+  "main": "index.js",
+  "homepage": "https://Max030201.github.io/currency-converter",
+  "scripts": {
+    "start": "webpack serve --mode development --open",
+    "build": "webpack --mode production",
+    "serve": "npx serve ./dist",
+    "proxy": "node proxy-server.js",
+    "deploy": "npm run build && gh-pages -d dist",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "currency",
+    "converter",
+    "react",
+    "exchange-rates"
+  ],
+  "author": "Max",
+  "license": "ISC",
+  "description": "A React-based currency converter application using the Frankfurter API",
+  "dependencies": {
+    "date-fns": "^4.1.0",
+    "express": "^4.21.2",
+    "lodash": "^4.17.21",
+    "node-fetch": "^3.3.2",
+    "primeicons": "^7.0.0",
+    "primereact": "^10.9.6",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "react-icons": "^5.5.0",
+    "react-router-dom": "^7.6.3",
+    "recharts": "^3.0.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.28.0",
+    "@babel/preset-env": "^7.28.0",
+    "@babel/preset-react": "^7.27.1",
+    "@testing-library/jest-dom": "^6.6.3",
+    "@testing-library/react": "^16.3.0",
+    "autoprefixer": "^10.4.21",
+    "babel-loader": "^10.0.0",
+    "css-loader": "^7.1.2",
+    "gh-pages": "^6.3.0",
+    "html-webpack-plugin": "^5.6.3",
+    "jest": "^30.0.4",
+    "mini-css-extract-plugin": "^2.9.2",
+    "postcss": "^8.5.6",
+    "postcss-loader": "^8.1.1",
+    "style-loader": "^4.0.0",
+    "tailwindcss": "^3.4.17",
+    "webpack": "^5.99.9",
+    "webpack-cli": "^6.0.1",
+    "webpack-dev-server": "^5.2.2"
+  }
+}
