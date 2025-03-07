@@ -1,0 +1,202 @@
+@import 'primereact/resources/themes/saga-blue/theme.css';
+@import 'primereact/resources/primereact.min.css';
+@import 'primeicons/primeicons.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Удалены все кастомные стили скроллбара страницы. Оставлен только html { overflow-y: scroll; } для предотвращения скачка. */
+
+html {
+  overflow-y: scroll;
+}
+.p-dropdown-label {
+  display: flex;
+  align-items: center;
+  padding-left: 0;
+  font-size: inherit;
+}
+.p-inputtext::placeholder, .p-dropdown-label.p-placeholder {
+  color: #8b949e; /* светло-серый, как у стрелки */
+  opacity: 1;
+}
+.dark .p-inputtext::placeholder, .dark .p-dropdown-label.p-placeholder {
+  color: #6b7280; /* Tailwind gray-500, как у стрелки в dark */
+  opacity: 1;
+}
+.p-dropdown.p-focus,
+.p-inputnumber-input:focus {
+  outline: none !important;
+  box-shadow: 0 0 0 3px #2563eb40 !important;
+  border-color: #2563eb !important;
+}
+.dark .p-dropdown.p-focus,
+.dark .p-inputnumber-input:focus {
+  outline: none !important;
+  box-shadow: 0 0 0 3px #60a5fa80 !important;
+  border-color: #60a5fa !important;
+}
+.swap-btn {
+  transition: box-shadow 0.2s, background 0.2s, border-color 0.2s;
+}
+.swap-btn:hover,
+.swap-btn:focus-visible {
+  background: #e0e7ff !important; /* светло-синий фон */
+  box-shadow: 0 0 0 3px #2563eb40 !important;
+  border-color: #2563eb !important;
+}
+.dark .swap-btn:hover,
+.dark .swap-btn:focus-visible {
+  /* background: #1e40af !important; насыщенно-синий фон */
+  box-shadow: 0 0 0 3px #60a5fa80 !important;
+  border-color: #60a5fa !important;
+}
+.p-dropdown-panel {
+  background: #fff;
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 24px 0 #2563eb10;
+  border: 1.5px solid #cbd5e1;
+  margin-top: 0.25rem;
+  padding: 0.25rem 0;
+  color: #1e293b;
+}
+.p-dropdown-panel .p-dropdown-items {
+  padding: 0;
+}
+.p-dropdown-item {
+  padding: 0.75rem 1.25rem;
+  font-size: 1.05rem;
+  color: #1e293b;
+  border-radius: 0.5rem;
+  transition: background 0.15s, color 0.15s;
+  margin: 0 0.25rem;
+}
+.p-dropdown-item.p-highlight,
+.p-dropdown-item:hover {
+  background: #e0e7ff;
+  color: #1d4ed8;
+}
+.p-dropdown-filter {
+  background: #f1f5f9;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+  margin: 0.5rem 0.75rem 0.5rem 0.75rem;
+  color: #1e293b;
+}
+.dark .p-dropdown-panel {
+  background: #1e293b;
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 24px 0 #60a5fa20;
+  border: 1.5px solid #334155;
+  color: #f1f5f9;
+}
+.dark .p-dropdown-item {
+  color: #f1f5f9;
+  background: transparent;
+}
+.dark .p-dropdown-item.p-highlight,
+.dark .p-dropdown-item:hover {
+  background: #1e40af;
+  color: #60a5fa;
+}
+.dark .p-dropdown-filter {
+  background: #334155;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+  margin: 0.5rem 0.75rem 0.5rem 0.75rem;
+  color: #f1f5f9;
+}
+.dark .p-dropdown-panel .p-dropdown-header {
+  background: #1e293b;
+}
+.dark .p-dropdown-label {
+  color: #f1f5f9;
+}
+.p-dropdown-panel {
+  scrollbar-width: thin;
+  scrollbar-color: #2563eb #f1f5f9;
+}
+.p-dropdown-panel::-webkit-scrollbar {
+  width: 10px;
+  background: #f1f5f9;
+  border-radius: 8px;
+}
+.p-dropdown-panel::-webkit-scrollbar-thumb {
+  background: #2563eb;
+  border-radius: 8px;
+}
+.p-dropdown-panel::-webkit-scrollbar-thumb:hover {
+  background: #1d4ed8;
+}
+
+.dark .p-dropdown-panel {
+  scrollbar-color: #60a5fa #1e293b;
+}
+.dark .p-dropdown-panel::-webkit-scrollbar {
+  width: 10px;
+  background: #1e293b;
+  border-radius: 8px;
+}
+.dark .p-dropdown-panel::-webkit-scrollbar-thumb {
+  background: #60a5fa;
+  border-radius: 8px;
+}
+.dark .p-dropdown-panel::-webkit-scrollbar-thumb:hover {
+  background: #3b82f6;
+}
+.p-dropdown-clear-icon {
+  right: 3rem;
+}
+
+/* Темная тема для таблицы популярных курсов */
+.dark .p-datatable {
+  background: #232b36 !important;
+  color: #f1f5f9 !important;
+}
+.dark .p-datatable .p-datatable-thead > tr > th {
+  background: #273040 !important;
+  color: #f1f5f9 !important;
+  border-bottom: 1.5px solid #334155 !important;
+}
+.dark .p-datatable .p-datatable-tbody > tr > td {
+  background: #232b36 !important;
+  color: #f1f5f9 !important;
+  border-color: #334155 !important;
+}
+.dark .p-datatable .p-datatable-tbody > tr:hover > td {
+  background: #1e293b !important;
+}
+.dark .p-datatable .p-datatable {
+  border-radius: 1rem;
+}
+
+/* Нижние бордеры для строк таблицы популярных курсов, кроме последней */
+.p-datatable .p-datatable-tbody > tr:not(:last-child) > td {
+  border-bottom: 2px solid #e5e7eb !important; /* Tailwind gray-200 */
+}
+.dark .p-datatable .p-datatable-tbody > tr:not(:last-child) > td {
+  border-bottom: 2px solid #334155 !important; /* светлый бордер для dark */
+}
+.p-menubar-root-list {
+  width: fit-content;
+  background: #fff;
+}
+.p-menuitem-link,
+.p-menuitem-text {
+  color: #6c757d;
+}
+.p-menuitem-icon {
+  color: #6c757d;
+}
+.dark .p-menubar-root-list {
+  width: fit-content;
+  background: #1e293b;
+}
+.dark .p-menuitem-link,
+.dark .p-menuitem-text {
+  color: #6c757d;
+}
+.dark .p-menuitem-icon {
+  color: #6c757d;
+}
