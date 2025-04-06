@@ -12,7 +12,7 @@ export async function fetchCurrencies() {
         'Accept': 'application/json',
         'Content-Type': 'application/json'
       },
-      signal: AbortSignal.timeout(10000)
+      signal: AbortSignal.timeout(20000)
     });
     
     if (!response.ok) {
@@ -41,7 +41,7 @@ export async function fetchLatest(base = 'USD', symbols = '') {
         'Accept': 'application/json',
         'Content-Type': 'application/json'
       },
-      signal: AbortSignal.timeout(10000)
+      signal: AbortSignal.timeout(20000)
     });
     
     if (!response.ok) {
@@ -65,7 +65,7 @@ export async function fetchExchangeRate(from, to) {
         'Accept': 'application/json',
         'Content-Type': 'application/json'
       },
-      signal: AbortSignal.timeout(10000)
+      signal: AbortSignal.timeout(20000)
     });
     
     if (!response.ok) {
@@ -90,7 +90,7 @@ export async function fetchLatestRates(baseCurrency, targetCurrencies) {
         'Accept': 'application/json',
         'Content-Type': 'application/json'
       },
-      signal: AbortSignal.timeout(10000)
+      signal: AbortSignal.timeout(20000)
     });
     
     if (!response.ok) {
@@ -119,7 +119,7 @@ export async function fetchHistorical(date, base = 'USD', symbols = '') {
         'Accept': 'application/json',
         'Content-Type': 'application/json'
       },
-      signal: AbortSignal.timeout(10000)
+      signal: AbortSignal.timeout(20000)
     });
     
     if (!response.ok) {
@@ -147,7 +147,7 @@ export async function fetchTimeSeries(startDate, endDate, base = 'USD', symbols 
       headers: {
         'Accept': 'application/json'
       },
-      signal: AbortSignal.timeout(15000)
+      signal: AbortSignal.timeout(20000)
     });
     
     if (!response.ok) {
