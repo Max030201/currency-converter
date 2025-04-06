@@ -4,8 +4,8 @@ import { useCurrencyChart } from './useCurrencyChart';
 
 export function useChartPageLogic() {
   const { currencies, loading: currenciesLoading, error: currenciesError } = useCurrencyList();
-  const [base, setBase] = useState('USD');
-  const [target, setTarget] = useState('EUR');
+  const [base, setBase] = useState('EUR');
+  const [target, setTarget] = useState('USD');
   const [period, setPeriod] = useState(30); // дней
   const [isFirstLoad, setIsFirstLoad] = useState(true);
 
@@ -26,7 +26,6 @@ export function useChartPageLogic() {
       fetchData(base, target, period);
       setIsFirstLoad(false);
     }
-    // eslint-disable-next-line
   }, []);
 
   // Обработчик обновления графика
