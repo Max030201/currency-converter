@@ -9,13 +9,15 @@ import HomePage from './view/pages/HomePage';
 import RatesPage from './view/pages/RatesPage';
 import ChartPage from './view/pages/ChartPage';
 import HistoryPage from './view/pages/HistoryPage';
+import DebugInfo from './view/components/Common/DebugInfo';
 
 const App = () => (
   <ThemeProvider>
     <ToastProvider>
       <CurrencyProvider>
         <RepeatConversionProvider>
-        <Router>
+        <Router basename={process.env.NODE_ENV === 'production' ? '/currency-converter' : ''}>
+          <DebugInfo />
           <Routes>
             <Route path="/" element={<MainLayout />}>
               <Route index element={<HomePage />} />
