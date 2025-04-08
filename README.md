@@ -81,7 +81,7 @@ currency-converter/
         model/
         controller/
         view/
-  proxy-server.js                  # Прокси-сервер для разработки
+  proxy-server.js                   # Прокси-сервер для разработки
   webpack.config.js
   postcss.config.js
   tailwind.config.js
